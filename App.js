@@ -29,11 +29,11 @@ function DetailsScreen({ navigation }) {
 
 const Stack = createNativeStackNavigator();
 
-function CustomNavigationBar({route, navigation, previous}) {
-  console.log({previous});
+function CustomNavigationBar({route, navigation, back}) {
+  console.log({back});
   return (
     <Appbar.Header>
-      {previous ? (
+      {back ? (
         <Appbar.BackAction
           onPress={navigation.goBack}
         />
